@@ -4,16 +4,24 @@ import (
 	"fmt"
 )
 
-const englishHelloPrefix = "Hello, "
-
-func Hello(name string) string {
+func Hello(name, language string) string {
 	if name == "" {
-		return "Hello World"
-	} else {
-		return englishHelloPrefix + name
+		name = "World"
 	}
+
+	var greeting = ""
+	switch language {
+	case "Spanish":
+		greeting = "Hola, "
+	case "French":
+		greeting = "Bonjour, "
+	default:
+		greeting = "Hello, "
+	}
+
+	return greeting + name
 }
 
 func main() {
-	fmt.Println(Hello("Chris"))
+	fmt.Println(Hello("Chris", "English"))
 }
