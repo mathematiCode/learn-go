@@ -15,3 +15,15 @@ func Sum(nums []int) int {
 	}
 	return total
 }
+
+func SumAll(arrays ...[]int) []int {
+	var result []int
+	for _, array := range arrays {
+		var total int
+		for _, number := range array {
+			total += number
+		}
+		result = append(result, total)
+	}
+	return result
+}
