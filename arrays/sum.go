@@ -25,5 +25,13 @@ func SumAll(arrays ...[]int) []int {
 		}
 		result = append(result, total)
 	}
-	return result
+	
+
+hi := 5
+for _, hi > 0 {
+	hi = hi - 1
+	fmt.Printf("Hi %d", hi)
+}
+
+return result
 }
